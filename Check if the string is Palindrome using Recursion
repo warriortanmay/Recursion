@@ -1,0 +1,15 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String str=sc.nextLine();
+	    int n=str.length();
+	    System.out.println(helper(0,n-1,str));
+	}
+	static boolean helper(int l,int h,String str){
+	    if(str.charAt(l)!=str.charAt(h)) return false;
+	    if(l>h) return true;
+	    return helper(l+1,h-1,str);
+	}
+}
