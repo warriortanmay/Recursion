@@ -1,0 +1,14 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		System.out.println(printSum(0,1,n));
+	}
+	static int printSum(int sum,int i,int n){
+	    if(i>n) return sum;
+	    sum+=i;
+	    return printSum(sum,i+1,n);
+	}
+}
